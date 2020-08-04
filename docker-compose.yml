@@ -1,0 +1,14 @@
+jbwphp:
+    image: registry.cn-hangzhou.aliyuncs.com/jryhd/nginx-php
+    command: nginx
+    environment:
+        - SITE_DOMAIN=zmw.com
+        - DB_HOST=114.215.192.224
+        - DB_USERNAME=jr1
+        - DB_PASSWORD=JRyhdweb123
+        - USE_NFS=0
+        - WWWROOT=/localroot
+    ports:
+        - 8090:80
+    volumes:
+        - /Users/jbw/Documents/wwwroot/jbwphp:/localroot:rw
